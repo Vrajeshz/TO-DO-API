@@ -1,0 +1,350 @@
+{
+  "info": {
+    "_postman_id": "df02e896-b640-41d8-9e6e-93fd2e6e2313",
+    "name": "To-Do",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "46718075",
+    "_collection_link": "https://go.postman.co/collection/46718075-df02e896-b640-41d8-9e6e-93fd2e6e2313?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Sign Up",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{   \r\n    \"name\": \"Vrajesh Patadiya\",\r\n    \"email\": \"test@gmail.com\",\r\n    \"password\": \"pass1234\",\r\n    \"passwordConfirm\": \"pass1234\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8080/api/v1/users/signup",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "users",
+            "signup"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "login",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"test@gmail.com\",\r\n    \"password\": \"pass1234\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8080/api/v1/users/login",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "users",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get all Todos",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OGIyYzQzYjE3MDFhZjAzMDQxNTA4NCIsImlhdCI6MTc3MDczOTcwMCwiZXhwIjoxNzcxNjAzNzAwfQ.AoYsHbfOJPaPt2HJbIGS3pnl-vVcnJMwzt2nT0rR9WM",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8080/api/v1/todos",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "todos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create todo",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OGIyYzQzYjE3MDFhZjAzMDQxNTA4NCIsImlhdCI6MTc3MDczOTcwMCwiZXhwIjoxNzcxNjAzNzAwfQ.AoYsHbfOJPaPt2HJbIGS3pnl-vVcnJMwzt2nT0rR9WM",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"task\": \"Finish Node.js Project\",\r\n    \"description\": \"Complete the Todo application and test all routes with JWT\",\r\n    \"priority\": \"high\",\r\n    \"status\": \"in-progress\",\r\n    \"dueDate\": \"2024-12-31T23:59:59Z\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8080/api/v1/todos",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "todos"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get todo by ID",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OGIyYzQzYjE3MDFhZjAzMDQxNTA4NCIsImlhdCI6MTc3MDczOTcwMCwiZXhwIjoxNzcxNjAzNzAwfQ.AoYsHbfOJPaPt2HJbIGS3pnl-vVcnJMwzt2nT0rR9WM",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8080/api/v1/todos/698b5ad524dfdc2dd19f7099",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "todos",
+            "698b5ad524dfdc2dd19f7099"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update todo by ID",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OGIyYzQzYjE3MDFhZjAzMDQxNTA4NCIsImlhdCI6MTc3MDczOTcwMCwiZXhwIjoxNzcxNjAzNzAwfQ.AoYsHbfOJPaPt2HJbIGS3pnl-vVcnJMwzt2nT0rR9WM",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"status\": \"completed\",\r\n    \"priority\": \"low\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8080/api/v1/todos/698b5ad524dfdc2dd19f7099",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "todos",
+            "698b5ad524dfdc2dd19f7099"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete todo by ID",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OGIyYzQzYjE3MDFhZjAzMDQxNTA4NCIsImlhdCI6MTc3MDczOTcwMCwiZXhwIjoxNzcxNjAzNzAwfQ.AoYsHbfOJPaPt2HJbIGS3pnl-vVcnJMwzt2nT0rR9WM",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8080/api/v1/todos/698b5ad524dfdc2dd19f7099",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "todos",
+            "698b5ad524dfdc2dd19f7099"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Logout",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OGI3MDNmYmNiMDIxNjg3NzI2ZTM0NCIsImlhdCI6MTc3MDc0NzI4OCwiZXhwIjoxNzcwNzQ4MTg4fQ.gQbkmH4UnnSVj-Pcw6F1TM7N2WkmUJ-XkcxXy9h20wY",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8080/api/v1/users/logout",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "users",
+            "logout"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Refresh",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8080/api/v1/users/refresh",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "users",
+            "refresh"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
