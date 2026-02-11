@@ -64,8 +64,6 @@ JWT_REFRESH_EXPIRES_IN=7d
 JWT_REFRESH_COOKIE_EXPIRES_IN=7
 ```
 
-Important: never commit secrets to version control.
-
 ## Installation & Run (Local)
 
 1. Install dependencies
